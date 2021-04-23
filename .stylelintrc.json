@@ -8,5 +8,5 @@
     "no-descending-specificity": null,
     "no-invalid-double-slash-comments": null
   },
-  "ignoreFiles": ["node_modules/**/*", "extensions/**/*", "**/typings/**/*", ".cacha/*"]
+  "ignoreFiles": ["node_modules/**/*", "extensions/**/*", "**/typings/**/*", ".cacha/*", "packages/**/*"]
 }

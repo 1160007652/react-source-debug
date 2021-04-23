@@ -16,6 +16,10 @@
     // 格式化css
     "source.fixAll.stylelint": true
   },
+  "flowtype.flow-for-vscode": {
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false
+  },
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },

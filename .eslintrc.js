@@ -59,4 +59,10 @@ module.exports = {
       },
     },
   },
+  globals: {
+    __DEV__: true,
+    __PROFILE__: true,
+    __UMD__: true,
+    __EXPERIMENTAL__: true,
+  },
 };

@@ -82,12 +82,12 @@ module.exports = {
               },
             },
           },
-          {
-            loader: 'sass-resources-loader',
-            options: {
-              resources: [path.resolve(LESS_PATH_ROOT, 'less-var.less')],
-            },
-          },
+          // {
+          //   loader: 'sass-resources-loader',
+          // options: {
+          // resources: [path.resolve(LESS_PATH_ROOT, 'less-var.less')],
+          // },
+          // },
         ],
       },
       {
@@ -121,6 +121,10 @@ module.exports = {
       _constants: path.resolve(SRC_ROOT, './constants/'),
       _utils: path.resolve(SRC_ROOT, './utils'),
       _assets: path.resolve(SRC_ROOT, './assets'),
+      react: path.resolve(PROJECT_ROOT, './packages/react'),
+      'react-dom': path.resolve(PROJECT_ROOT, './packages/react-dom'),
+      shared: path.resolve(PROJECT_ROOT, './packages/shared'),
+      'react-reconciler': path.resolve(PROJECT_ROOT, './packages/react-reconciler'),
     },
   },
   plugins: [
@@ -140,6 +144,14 @@ module.exports = {
     }),
     new DefinePlugin({
       'process.env.VERSION_APP': JSON.stringify(pkgJson.version),
+      // 'process.env': Object.keys(raw).reduce((env, key) => {
+      //   env[key] = JSON.stringify(raw[key]);
+      //   return env;
+      // }, {}),
+      __DEV__: true,
+      __PROFILE__: true,
+      __UMD__: true,
+      __EXPERIMENTAL__: true,
     }),
   ],
 };
